@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/friendly.css" />
+    <link rel="stylesheet" type="text/css" href="css/enemy.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div id="result-defender"><center>Defender winchance</center></div>
+    <div id="result-attacker"><center>Attacker winchance</center></div>
+ <div class="ships player" id="enemy">
+        <div class="ship-layout" id="interceptor-enemy">
+          <!-- Interceptor -->
+          <div class="ship-part" id="interceptor-part-one-enemy">        <img src="pictures\eclipse_nuclear_source.png" alt="nuclear_source" class="grid-item" draggable="true" id="nuclear_source" ></img></div>
+          <div class="ship-part" id="interceptor-part-two-enemy">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="ion_cannon" ></img></div>
+          <div class="ship-part" id="interceptor-part-three-enemy"></div>
+          <div class="ship-part" id="interceptor-part-four-enemy">        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="nuclear_drive" ></img></div>
+          <input class="input" id="input-enemy-interceptor" type="number" name="quantity" value="0" min="0">
+        </div>
+        <!-- Cruiser -->
+        <div class="ship-layout" id="cruiser-enemy">
+          <div class="ship-part" id="cruiser-part-one-enemy">        <img src="pictures\eclipse_nuclear_source.png" alt="nuclear_source" class="grid-item" draggable="true" id="-1" ></img></div>
+          <div class="ship-part" id="cruiser-part-two-enemy">        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-2" ></img></div>
+          <div class="ship-part" id="cruiser-part-three-enemy">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-3" ></img></div>
+          <div class="ship-part" id="cruiser-part-four-enemy"></div>
+          <div class="ship-part" id="cruiser-part-five-enemy">        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-4" ></img></div>
+          <div class="ship-part" id="cruiser-part-six-enemy">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-5" ></img></div>
+          <input class="input" id="input-enemy-cruiser" type="number" name="quantity" value="0" min="0">
+        </div>
+        <!-- Dreadnought -->
+        <div class="ship-layout" id="dreadnought-enemy">
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-one-enemy"
+          >        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-6" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-two-enemy"
+          >        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-7" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-three-enemy"
+          >        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-8" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-four-enemy"
+          >        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-9" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-five-enemy"
+          ></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-six-enemy"
+          >        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-10" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-seven-enemy"
+          >        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-11" ></img></div>
+          <div
+            class="ship-part ship-part-dreadnought"
+            id="dreadnought-part-eight-enemy"
+          >        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-12" ></img></div>
+          <input class="input" id="input-enemy-dreadnought" type="number" name="quantity" value="0" min="0">
+        </div>
+        <div class="ship-layout" id="starbase-enemy">
+          <div class="ship-part" id="starbase-part-one-enemy">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-13" ></img></div>
+          <div class="ship-part" id="starbase-part-two-enemy">        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-14" ></img></div>
+          <div class="ship-part" id="starbase-part-three-enemy"></div>
+          <div class="ship-part" id="starbase-part-four-enemy">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-15" ></img></div>
+          <div class="ship-part" id="starbase-part-five-enemy">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-16" ></img></div>
+          <input class="input" id="input-enemy-starbase" type="number" name="quantity" value="0" min="0">
+
+          
+        </div>
+        
+      </div>
+    <div class="ships" id="friendly">
+      <div class="ship-layout" id="interceptor-friendly">
+        <!-- Interceptor -->
+        <div class="ship-part" id="interceptor-part-one-friendly">        <img src="pictures\eclipse_nuclear_source.png" alt="nuclear_source" class="grid-item"  id="-17" ></img>
+        </div>
+        <div class="ship-part" id="interceptor-part-two-friendly">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" draggable="true" id="18" ></img>
+        </div>
+        <div class="ship-part" id="interceptor-part-three-friendly"></div>
+        <div class="ship-part" id="interceptor-part-four-friendly">        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-36" ></img></div>
+        <input class="input" id="input-friendly-interceptor" type="number" name="quantity" value="0" min="0">
+      </div>
+      <!-- Cruiser -->
+      <div class="ship-layout" id="cruiser-friendly">
+        <div class="ship-part" id="cruiser-part-one-friendly">        <img src="pictures\eclipse_nuclear_source.png" alt="nuclear_source" class="grid-item" draggable="true" id="-20" ></img></div>
+        <div class="ship-part" id="cruiser-part-two-friendly">        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-21" ></img></div>
+        <div class="ship-part" id="cruiser-part-three-friendly">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-22" ></img></div>
+        <div class="ship-part" id="cruiser-part-four-friendly"></div>
+        <div class="ship-part" id="cruiser-part-five-friendly">        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-23" ></img></div>
+        <div class="ship-part" id="cruiser-part-six-friendly">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-24" ></img></div>
+        <input class="input" id="input-friendly-cruiser" type="number" name="quantity" value="0" min="0">
+      </div>
+      <!-- Dreadnought -->
+      <div class="ship-layout" id="dreadnought-friendly">
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-one-friendly"
+        >        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-25" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-two-friendly"
+        >        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-26" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-three-friendly"
+        >        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-27" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-four-friendly"
+        >        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-28" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-five-friendly"
+        ></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-six-friendly"
+        >        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="-29" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-seven-friendly"
+        >        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-30" ></img></div>
+        <div
+          class="ship-part ship-part-dreadnought"
+          id="dreadnought-part-eight-friendly"
+        >        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-31" ></img></div>
+        <input class="input" id="input-friendly-dreadnought" type="number" name="quantity" value="0" min="0">
+      </div>
+      <div class="ship-layout" id="starbase-friendly">
+        <div class="ship-part" id="starbase-part-one-friendly">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-32" ></img></div>
+        <div class="ship-part" id="starbase-part-two-friendly">        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="-33" ></img></div>
+        <div class="ship-part" id="starbase-part-three-friendly"></div>
+        <div class="ship-part" id="starbase-part-four-friendly">        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="-34" ></img></div>
+        <div class="ship-part" id="starbase-part-five-friendly">        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="-35" ></img></div>
+        <input class="input" id="input-friendly-starbase" type="number" name="quantity" value="0" min="0">
+
+      </div>
+
+    </div>
+
+    <div class="ancient-group invisible" id="guardian-enemy">
+      <input class="input" id="input-ancient-guardian-1" type="number" name="quantity" value="0" min="0">
+      <input class="input" id="input-ancient-guardian-2" type="number" name="quantity" value="0" min="0">
+      <input class="input" id="input-ancient-guardian-3" type="number" name="quantity" value="0" min="0">
+    </div>
+    <div class="button-change">
+      <button type="change-player" id="changeButton">change to ancient ships</button>
+    </div>
+    <button id="fight"><span>FIGHT!</span></button>
+
+    <div class="grid-container">
+        <img src="pictures\eclipse_ion_cannon.png" alt="ion_cannon" class="grid-item" draggable="true" id="ion_cannon" ></img>
+        <img src="pictures\eclipse_plasma_cannon.png" alt="plasma_cannon" class="grid-item" draggable="true" id="plasma_cannon" ></img>
+        <img src="pictures\eclipse_soliton_cannon.png" alt="soliton_cannon" class="grid-item" draggable="true" id="soliton_cannon" ></img>
+        <img src="pictures\eclipse_antimatter_cannon.png" alt="antimatter_cannon" class="grid-item" draggable="true" id="antimatter_cannon" ></img>
+        <img src="pictures\eclipse_rift_cannon.png" alt="rift_cannon" class="grid-item" draggable="true" id="rift_cannon" ></img>
+        <!--   -->
+        <img src="pictures\eclipse_nuclear_source.png" alt="nuclear_source" class="grid-item" draggable="true" id="nuclear_source" ></img>
+        <img src="pictures\eclipse_fusion_source.png" alt="fusion_source" class="grid-item" draggable="true" id="fusion_source" ></img>
+        <img src="pictures\eclipse_tachyon_source.png" alt="tachyon_source" class="grid-item" draggable="true" id="tachyon_source" ></img>
+        <img src="pictures\eclipse_zero_point_source.png" alt="zero_point_source" class="grid-item" draggable="true" id="zero_point_source" ></img>
+        <img src="pictures\eclipse_absorption_shield.png" alt="absorption_shield" class="grid-item" draggable="true" id="absorption_shield" ></img>
+        <!--  -->
+        <img src="pictures\eclipse_electron_computer.png" alt="electron_computer" class="grid-item" draggable="true" id="electron_computer" ></img>
+        <img src="pictures\eclipse_positron_computer.png" alt="positron_computer" class="grid-item" draggable="true" id="positron_computer" ></img>
+        <img src="pictures\eclipse_gluon_computer.png" alt="gluon_computer" class="grid-item" draggable="true" id="gluon_computer" ></img>
+        <img src="pictures\eclipse_sentient_hull.png" alt="sentient_hull" class="grid-item" draggable="true" id="sentient_hull" ></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <!--  -->
+        <img src="pictures\eclipse_hull.png" alt="hull" class="grid-item" draggable="true" id="hull" ></img>
+        <img src="pictures\eclipse_improved_hull.png" alt="improved_hull" class="grid-item" draggable="true" id="improved_hull" ></img>
+        <img src="pictures\eclipse_conifold_field.png" alt="conifold_field" class="grid-item" draggable="true" id="conifold_field" ></img>
+        <img src="pictures\eclipse_sentient_hull.png" alt="sentient_hull" class="grid-item" draggable="true" id="sentient_hull" ></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <!--  -->
+        <img src="pictures\eclipse_nuclear_drive.png" alt="nuclear_drive" class="grid-item" draggable="true" id="nuclear_drive" ></img>
+        <img src="pictures\eclipse_fusion_drive.png" alt="fusion_drive" class="grid-item" draggable="true" id="fusion_drive" ></img>
+        <img src="pictures\eclipse_tachyon_drive.png" alt="tachyon_drive" class="grid-item" draggable="true" id="tachyon_drive" ></img>
+        <img src="pictures\eclipse_transition_drive.png" alt="transition_drive" class="grid-item" draggable="true" id="transition_drive" ></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <!--  -->
+        <img src="pictures\eclipse_gauss_shield.png" alt="gauss_shield" class="grid-item" draggable="true" id="gauss_shield" ></img>
+        <img src="pictures\eclipse_phase_shield.png" alt="phase_shield" class="grid-item" draggable="true" id="phase_shield" ></img>
+        <img src="pictures\eclipse_absorption_shield.png" alt="absorption_shield" class="grid-item" draggable="true" id="absorption_shield" ></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <!--  -->
+        <img src="pictures\eclipse_flux_missile.png" alt="flux_missile" class="grid-item" draggable="true" id="flux_missile" ></img>
+        <img src="pictures\eclipse_plasma_missile.png" alt="plasma_missile" class="grid-item" draggable="true" id="plasma_missile" ></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+        <img src="" alt="Invisible" class="invisible"></img>
+    </div>
+    <!-- in copy werden die bewegten objekte gespeichert. auf diese Weise verschwinden sie nicht aus dem drop menu -->
+    <div id="copy"></div>
+    <script type="module" src="scripts/initialize_variables.js"></script>
+    <script type="module" src="scripts/battle.js"></script>
+    <script type="module" src="scripts/readWebsite.js"></script>
+    <script type="module" src="scripts/drag_and_drop.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+    
+  </body>
+</html>
