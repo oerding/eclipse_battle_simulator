@@ -1,0 +1,135 @@
+/* gibt das div an auf dem alle friendly ships liegen */
+#friendly {
+  top: calc(100vh - var(--all_height));
+  background-image: url("../pictures/eclipse_human_ships_modified.png");
+  background-size: var(--all_width) var(--all_height);
+}
+
+/* Interceptor */
+/* #interceptor-friendly {
+  position: absolute;
+} */
+
+#interceptor-part-one-friendly {
+  left: calc(var(--all_width) * (10 / 710));
+  top: calc(var(--all_height) * (68 / 144));
+}
+
+#interceptor-part-two-friendly {
+  left: calc(var(--all_width) * (57 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#interceptor-part-three-friendly {
+  left: calc(var(--all_width) * (103 / 710));
+  top: calc(var(--all_height) * (68 / 144));
+}
+#interceptor-part-four-friendly {
+  left: calc(var(--all_width) * (57 / 710));
+  top: calc(var(--all_height) * (76 / 144));
+}
+
+/* Cruiser */
+
+#cruiser-part-one-friendly {
+  left: calc(var(--all_width) * (174 / 710));
+  top: calc(var(--all_height) * (95.5 / 144));
+}
+
+#cruiser-part-two-friendly {
+  left: calc(var(--all_width) * (174 / 710));
+  top: calc(var(--all_height) * (50 / 144));
+}
+#cruiser-part-three-friendly {
+  left: calc(var(--all_width) * (220 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#cruiser-part-four-friendly {
+  left: calc(var(--all_width) * (265 / 710));
+  top: calc(var(--all_height) * (50 / 144));
+}
+#cruiser-part-five-friendly {
+  left: calc(var(--all_width) * (265 / 710));
+  top: calc(var(--all_height) * (95.5 / 144));
+}
+#cruiser-part-six-friendly {
+  left: calc(var(--all_width) * (220 / 710));
+  top: calc(var(--all_height) * (76.5 / 144));
+}
+
+/* Dreadnought */
+
+#dreadnought-part-one-friendly {
+  left: calc(var(--all_width) * (343 / 710));
+  top: calc(var(--all_height) * (95.5 / 144));
+}
+
+#dreadnought-part-two-friendly {
+  left: calc(var(--all_width) * (343 / 710));
+  top: calc(var(--all_height) * (48.5 / 144));
+}
+#dreadnought-part-three-friendly {
+  left: calc(var(--all_width) * (388.5 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#dreadnought-part-four-friendly {
+  left: calc(var(--all_width) * (434 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#dreadnought-part-five-friendly {
+  left: calc(var(--all_width) * (480 / 710));
+  top: calc(var(--all_height) * (50 / 144));
+}
+#dreadnought-part-six-friendly {
+  left: calc(var(--all_width) * (480 / 710));
+  top: calc(var(--all_height) * (95.5 / 144));
+}
+#dreadnought-part-seven-friendly {
+  left: calc(var(--all_width) * (434 / 710));
+  top: calc(var(--all_height) * (76.5 / 144));
+}
+#dreadnought-part-eight-friendly {
+  left: calc(var(--all_width) * (388.5 / 710));
+  top: calc(var(--all_height) * (76.5 / 144));
+}
+
+/* Starbase */
+
+#starbase-part-one-friendly {
+  left: calc(var(--all_width) * (552.5 / 710));
+  top: calc(var(--all_height) * (75.5 / 144));
+}
+
+#starbase-part-two-friendly {
+  left: calc(var(--all_width) * (552.5 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#starbase-part-three-friendly {
+  left: calc(var(--all_width) * (598 / 710));
+  top: calc(var(--all_height) * (52 / 144));
+}
+#starbase-part-four-friendly {
+  left: calc(var(--all_width) * (643.5 / 710));
+  top: calc(var(--all_height) * (30 / 144));
+}
+#starbase-part-five-friendly {
+  left: calc(var(--all_width) * (643.5 / 710));
+  top: calc(var(--all_height) * (75.5 / 144));
+}
+
+/* Number of ships */
+#input-friendly-interceptor {
+  bottom: var(--all_height);
+  left: calc(var(--all_width) * (57 / 710));
+}
+#input-friendly-cruiser {
+  bottom: var(--all_height);
+  left: calc(var(--all_width) * (220 / 710));
+}
+#input-friendly-dreadnought {
+  bottom: var(--all_height);
+  left: calc(var(--all_width) * (400 / 710));
+}
+#input-friendly-starbase {
+  bottom: var(--all_height);
+  left: calc(var(--all_width) * (598 / 710));
+}

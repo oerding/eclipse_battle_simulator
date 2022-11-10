@@ -1,0 +1,171 @@
+:root {
+  --all_height: 0;
+  --all_width: 0;
+  --ship_part_width: 0;
+  --ship_part_height: 0;
+  --panel_left: 0;
+  --ship_part_width: 0;
+  --ship_part_height: 0;
+  --ship_part_one_left: 0;
+}
+
+* {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../pictures/eclipse-wallpaper-1920x1080.jpg");
+  /* background-size: 100vw 100vh; */
+}
+
+.input {
+  position: absolute;
+  opacity: 0.8;
+  height: calc(1 * 45 / 144 * var(--all_height));
+  width: calc(1.5 * 45 / 710 * var(--all_width));
+}
+
+/* gibt das div an auf dem alle schifftypen liegen */
+.ships {
+  width: var(--all_width);
+  height: var(--all_height);
+  position: absolute;
+  left: var(--panel_left);
+}
+
+.ancient-group {
+  width: var(--all_width);
+  height: var(--all_height);
+  position: absolute;
+  left: var(--panel_left);
+  visibility: visible;
+  background-image: url("../pictures/eclipse_ancients.png");
+  background-size: var(--all_width) var(--all_height);
+}
+
+#input-ancient-guardian-1 {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+}
+#input-ancient-guardian-2 {
+  position: absolute;
+  top: 100%;
+  left: 45%;
+}
+#input-ancient-guardian-3 {
+  position: absolute;
+  top: 100%;
+  left: 80%;
+}
+
+.button-change {
+  height: calc(45 / 144 * var(--all_height));
+  height: calc(45 / 710 * var(--all_width));
+  position: absolute;
+  left: calc(var(--panel_left) + 0.51 * var(--all_width));
+  top: calc(var(--all_height) + 45 / 144 * var(--all_height));
+}
+
+/* Formatierung der Schiffsbauteile */
+.ship-part {
+  /* background-color: rgb(238, 15, 15); */
+  position: absolute;
+  width: var(--ship_part_width);
+  height: var(--ship_part_height);
+  /* border-style: double;
+  border-width: 3px; */
+}
+
+/* Ship Components */
+.grid-container {
+  display: grid;
+  column-gap: 2px;
+  row-gap: 2px;
+  grid-template-columns: repeat(5, var(--ship_part_width));
+  padding: 0px;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  position: absolute;
+  top: 27vh;
+  left: var(--panel_left);
+}
+
+.grid-item {
+  padding: 0px;
+  height: var(--ship_part_height);
+  width: var(--ship_part_width);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.drag-over {
+  border: dashed 3px red;
+}
+
+#fight {
+  border-radius: 50%;
+  width: calc(
+    (100vh - var(--all_height) - 2 * 45 / 144 * var(--all_height)) / 2
+  );
+  height: calc(
+    (100vh - var(--all_height) - 2 * 45 / 144 * var(--all_height)) / 2
+  );
+  /* width: 200px;
+  height: 200px; */
+  border: none;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  background: red;
+  text-shadow: 0 3px 1px rgba(122, 17, 8, 0.8);
+  box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  transition: 0.4s all ease-in;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  position: absolute;
+  top: calc(
+    50% - (100vh - var(--all_height) - 2 * 45 / 144 * var(--all_height)) / 4
+  );
+  left: calc(
+    50% - (100vh - var(--all_height) - 2 * 45 / 144 * var(--all_height)) / 4
+  );
+}
+
+.pressed {
+  padding-top: 3px;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 rgb(183, 0, 0), 0 8px 6px rgba(0, 0, 0, 0.45);
+}
+
+#result-defender {
+  position: absolute;
+  top: calc(var(--all_height) + 1.5 * 45 / 144 * var(--all_height));
+  left: calc(var(--panel_left) + var(--all_width) * (552.5 / 710));
+  background-color: rgb(12, 134, 12);
+  opacity: 0.9;
+  width: calc(3 * 45 / 710 * var(--all_width));
+  height: calc(2 * 45 / 144 * var(--all_height));
+}
+
+#result-attacker {
+  position: absolute;
+  bottom: calc(var(--all_height) + 1.5 * 45 / 144 * var(--all_height));
+  left: calc(var(--panel_left) + var(--all_width) * (552.5 / 710));
+  background-color: rgb(238, 18, 18);
+  opacity: 0.9;
+  width: calc(3 * 45 / 710 * var(--all_width));
+  height: calc(2 * 45 / 144 * var(--all_height));
+}
